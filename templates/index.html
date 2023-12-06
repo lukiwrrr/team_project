@@ -8,7 +8,7 @@
   <meta name="author" content="" />
   <title>Trip Wonders | Homepage</title>
   <!-- Favicon-->
-  <link rel="icon" type="image/x-icon" href="../static/icon.png" />
+  <link rel="icon" type="image/x-icon" href="../static/img/myservices/logo.png" />
   <!-- Font Awesome icons (free version)-->
   <script src="https://use.fontawesome.com/releases/v6.3.0/js/all.js" crossorigin="anonymous"></script>
   <!-- Google fonts-->
@@ -23,6 +23,22 @@
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
   <link href="../static/css/mystyle.css" rel="stylesheet" />
+
+  <style>
+    a {
+      text-decoration: none;
+      /* Menghilangkan garis bawah */
+      color: inherit;
+      /* Menggunakan warna teks default */
+    }
+
+    a:hover {
+      text-decoration: none;
+      /* Menghilangkan garis bawah saat dihover */
+      color: inherit;
+      /* Tetap menggunakan warna teks default saat dihover */
+    }
+  </style>
 </head>
 
 <body id="page-top">
@@ -48,8 +64,8 @@
           </li>
         </ul>
         <!-- {% if not logged_in %} -->
-        <button class="btn btn-light ms-auto">Login</button>
-        <button class="btn btn-warning ms-2">Sign Up</button>
+        <button class="btn btn-light ms-auto"><a href="/login">Login</a></button>
+        <button class="btn btn-warning ms-2"><a href="/sign-up">Sign Up</a></button>
         <!-- {% endif %} -->
 
         <!-- {% if logged_in %} -->
@@ -108,9 +124,10 @@
       <h2 class="section-heading text-uppercase">
         Ayo Jelajahi Indonesia Bersama Kami!
       </h2>
-      <h3 class="section-subheading text-muted">
+      <!-- <h3 class="section-subheading text-muted">
         Lorem ipsum dolor sit amet consectetur.
-      </h3>
+      </h3> -->
+      <br>
     </div>
     <div class="bg-light support p-3">
       <div data-aos="fade-right" data-aos-duration="1000">
@@ -143,10 +160,11 @@
   <!-- Cities start-->
   <section class="page-section" id="destinations">
     <div class="text-center">
-      <h2 class="section-heading text-uppercase">Destinasi favorite</h2>
-      <h3 class="section-subheading text-muted">
+      <h2 class="section-heading text-uppercase">Destinasi favorit</h2>
+      <!-- <h3 class="section-subheading text-muted">
         Lorem ipsum dolor sit amet consectetur.
-      </h3>
+      </h3> -->
+      <br>
     </div>
     <div class="container-md">
       <div class="row row-cols-1 row-cols-md-3 row-cols-2 row-cols-sm-2 row-cols-lg-3 row-cols-xl-5 g-4">

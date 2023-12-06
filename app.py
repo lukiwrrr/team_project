@@ -36,5 +36,13 @@ def home():
   is_admin = False
   return render_template('index.html', user_info=user_info, logged_in=logged_in, is_admin=is_admin)
 
+@app.route('/login')
+def login():
+    return render_template('login.html')
+
+@app.route('/sign-up', methods=['GET', 'POST'])
+def register():
+    return render_template('register.html')
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port = 5000, debug = True)

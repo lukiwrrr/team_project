@@ -325,3 +325,14 @@ section.quote .layar-dalam p {
   padding: 4vw;
   font-size: 1.5rem;
 }
+
+/* Garis Bawah */
+br {
+  display: block;
+  margin: 0 auto;
+  width: 50%;
+  border-bottom: 1px solid #ffc800;
+  content: "";
+  margin-top: 10px;
+  margin-bottom: 40px;
+}
