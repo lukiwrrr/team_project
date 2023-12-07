@@ -22,16 +22,16 @@ window.addEventListener("DOMContentLoaded", (event) => {
       rootMargin: "0px 0px -40%",
     });
   }
-
-  const navbarToggler = document.body.querySelector(".navbar-toggler");
-  const responsiveNavItems = [].slice.call(
-    document.querySelectorAll("#navbarResponsive .nav-link")
-  );
-  responsiveNavItems.map(function (responsiveNavItem) {
-    responsiveNavItem.addEventListener("click", () => {
-      if (window.getComputedStyle(navbarToggler).display !== "none") {
-        navbarToggler.click();
-      }
-    });
-  });
 });
+
+document.addEventListener("DOMContentLoaded", function(){
+  if (window.innerWidth < 992) {
+  
+    document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
+      everydropdown.addEventListener('hidden.bs.dropdown', function () {
+          this.querySelectorAll('.submenu').forEach(function(everysubmenu){
+            everysubmenu.style.display = 'none';
+          });
+      })
+    })
+}});

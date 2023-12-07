@@ -32,7 +32,7 @@ def home():
   user_info = {
     'name': "Cindi"
   }
-  logged_in = False
+  logged_in = True
   is_admin = False
   return render_template('index.html', user_info=user_info, logged_in=logged_in, is_admin=is_admin)
 

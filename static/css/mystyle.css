@@ -310,7 +310,7 @@ h6 {
 }
 
 section.quote {
-  background: url("/static/img/backg.jpg") no-repeat;
+  background: url("../img/backg.jpg") no-repeat;
   background-attachment: fixed;
   background-position: center;
   background-size: cover;
