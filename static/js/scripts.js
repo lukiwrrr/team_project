@@ -1,3 +1,4 @@
+// navbar
 window.addEventListener("DOMContentLoaded", (event) => {
   var navbarShrink = function () {
     const navbarCollapsible = document.body.querySelector("#mainNav");
@@ -24,14 +25,35 @@ window.addEventListener("DOMContentLoaded", (event) => {
   }
 });
 
-document.addEventListener("DOMContentLoaded", function(){
+// small screen profile dropdown
+document.addEventListener("DOMContentLoaded", function () {
   if (window.innerWidth < 992) {
-  
-    document.querySelectorAll('.navbar .dropdown').forEach(function(everydropdown){
-      everydropdown.addEventListener('hidden.bs.dropdown', function () {
-          this.querySelectorAll('.submenu').forEach(function(everysubmenu){
-            everysubmenu.style.display = 'none';
+    document
+      .querySelectorAll(".navbar .dropdown")
+      .forEach(function (everydropdown) {
+        everydropdown.addEventListener("hidden.bs.dropdown", function () {
+          this.querySelectorAll(".submenu").forEach(function (everysubmenu) {
+            everysubmenu.style.display = "none";
           });
-      })
-    })
-}});
+        });
+      });
+  }
+});
+
+// search bar
+document.querySelector("#search-input").addEventListener("input", filterList);
+
+function filterList() {
+  const searchInput = document.querySelector("#search-input");
+  const filter = searchInput.value.toLowerCase();
+  const listItems = document.querySelectorAll(".mylist-item");
+
+  listItems.forEach((item) => {
+    let text = item.textContent;
+    if (text.toLowerCase().includes(filter.toLowerCase())) {
+      item.style.display = "";
+    } else {
+      item.style.display = "none";
+    }
+  });
+}

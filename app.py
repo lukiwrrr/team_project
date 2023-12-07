@@ -44,6 +44,14 @@ def login():
 def register():
     return render_template('register.html')
   
+@app.route('/destinations', methods=['GET'])
+def destinations():
+    return render_template('destinations.html')
+  
+@app.route('/about', methods=['GET'])
+def about():
+  return render_template('about.html')
+  
 @app.route('/cek_pesanan')
 def cek_pesanan():
   user_info = {
