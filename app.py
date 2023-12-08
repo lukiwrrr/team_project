@@ -30,7 +30,7 @@ TOKEN_KEY = 'mytoken'
 @app.route('/', methods= ['GET'])
 def home():
   user_info = {
-    'name': "Cindi"
+    'name': "Cindi Widiawati"
   }
   logged_in = True
   is_admin = False
@@ -52,6 +52,10 @@ def cek_pesanan():
   logged_in = True
   is_admin = False
   return render_template('cek_pesanan.html', user_info=user_info, logged_in=logged_in, is_admin=is_admin)
+
+@app.route('/beranda_admin')
+def beranda_admin():
+  return render_template('beranda_admin.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port = 5000, debug = True)
