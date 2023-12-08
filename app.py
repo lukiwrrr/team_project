@@ -44,9 +44,13 @@ def login():
 def register():
     return render_template('register.html')
   
-@app.route('/destinations', methods=['GET'])
+@app.route('/destinasi', methods=['GET'])
 def destinations():
     return render_template('destinations.html')
+
+@app.route('/detail_destinasi/<title>', methods=['GET'])
+def detail_destinasi(title):
+    return render_template('detail_destinasi.html')
   
 @app.route('/about', methods=['GET'])
 def about():

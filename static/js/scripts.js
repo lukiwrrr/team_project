@@ -57,3 +57,16 @@ function filterList() {
     }
   });
 }
+
+// detail destinations
+function next() {
+  let lists = $('.item')
+  $("#slide").append(lists[0]);
+  
+};
+
+function prev() {
+  let lists = $('.item')
+  $("#slide").prepend(lists[lists.length - 1]);
+  
+};
