@@ -69,5 +69,9 @@ def cek_pesanan():
 def beranda_admin():
   return render_template('beranda_admin.html')
 
+@app.route('/manajemen_destinasi')
+def manajemen_destinasi():
+  return render_template('manajemen_destinasi.html')
+
 if __name__ == '__main__':
     app.run('0.0.0.0', port = 5000, debug = True)

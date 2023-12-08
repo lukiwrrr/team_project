@@ -1,11 +1,245 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Trip Wonders | Beranda Admin</title>
+
+    <!-- Favicon -->
+    <link rel="icon" type="image/x-icon" href="../static/img/myservices/logo.png" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" integrity="sha512-xxxxx" crossorigin="anonymous" />
+
+    <!-- bootstrap -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous" />
+
+    <style>
+        body {
+            background-color: #7CB39D;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1600 900'%3E%3Cpolygon fill='%2330cc21' points='957 450 539 900 1396 900'/%3E%3Cpolygon fill='%2308aa15' points='957 450 872.9 900 1396 900'/%3E%3Cpolygon fill='%2332c637' points='-60 900 398 662 816 900'/%3E%3Cpolygon fill='%2325a323' points='337 900 398 662 816 900'/%3E%3Cpolygon fill='%2336bf47' points='1203 546 1552 900 876 900'/%3E%3Cpolygon fill='%23339c2e' points='1203 546 1552 900 1162 900'/%3E%3Cpolygon fill='%233cb853' points='641 695 886 900 367 900'/%3E%3Cpolygon fill='%233d9636' points='587 900 641 695 886 900'/%3E%3Cpolygon fill='%2343b15d' points='1710 900 1401 632 1096 900'/%3E%3Cpolygon fill='%23458f3d' points='1710 900 1401 632 1365 900'/%3E%3Cpolygon fill='%234aaa65' points='1210 900 971 687 725 900'/%3E%3Cpolygon fill='%234b8843' points='943 900 1210 900 971 687'/%3E%3C/svg%3E");
+            background-attachment: fixed;
+            background-size: cover;
+        }
+        /* Gaya untuk bagian kiri halaman */
+        .col-md-3 {
+            background-color: #DCDCDC;
+            background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='400' viewBox='0 0 800 800'%3E%3Cg fill='none' stroke='%238A9A93' stroke-width='1'%3E%3Cpath d='M769 229L1037 260.9M927 880L731 737 520 660 309 538 40 599 295 764 126.5 879.5 40 599-197 493 102 382-31 229 126.5 79.5-69-63'/%3E%3Cpath d='M-31 229L237 261 390 382 603 493 308.5 537.5 101.5 381.5M370 905L295 764'/%3E%3Cpath d='M520 660L578 842 731 737 840 599 603 493 520 660 295 764 309 538 390 382 539 269 769 229 577.5 41.5 370 105 295 -36 126.5 79.5 237 261 102 382 40 599 -69 737 127 880'/%3E%3Cpath d='M520-140L578.5 42.5 731-63M603 493L539 269 237 261 370 105M902 382L539 269M390 382L102 382'/%3E%3Cpath d='M-222 42L126.5 79.5 370 105 539 269 577.5 41.5 927 80 769 229 902 382 603 493 731 737M295-36L577.5 41.5M578 842L295 764M40-201L127 80M102 382L-261 269'/%3E%3C/g%3E%3Cg fill='%23E6E6E6'%3E%3Ccircle cx='769' cy='229' r='5'/%3E%3Ccircle cx='539' cy='269' r='5'/%3E%3Ccircle cx='603' cy='493' r='5'/%3E%3Ccircle cx='731' cy='737' r='5'/%3E%3Ccircle cx='520' cy='660' r='5'/%3E%3Ccircle cx='309' cy='538' r='5'/%3E%3Ccircle cx='295' cy='764' r='5'/%3E%3Ccircle cx='40' cy='599' r='5'/%3E%3Ccircle cx='102' cy='382' r='5'/%3E%3Ccircle cx='127' cy='80' r='5'/%3E%3Ccircle cx='370' cy='105' r='5'/%3E%3Ccircle cx='578' cy='42' r='5'/%3E%3Ccircle cx='237' cy='261' r='5'/%3E%3Ccircle cx='390' cy='382' r='5'/%3E%3C/g%3E%3C/svg%3E");
+            /* background-color: #dbdcdb; */
+            /* background-image: url("https://referensiwisata.com/wp-content/uploads/2019/04/wisata-gunung-bromo.jpg"); */
+            height: 100vh;
+            color: #fff;
+            padding-top: 20px;
+            padding-left: 20px;
+        }
+
+        .col-md-3 h4 {
+            color: #000;
+            margin-bottom: 20px;
+        }
+
+        /* Gaya untuk tombol di bagian kiri halaman */
+        .col-md-3 .list-unstyled .btn {
+            width: 80%;
+            height: 50px;
+            text-align: center;
+            border-radius: 0;
+            color: #fff;
+            background-color: #23568c;
+            margin-bottom: 5px;
+            padding: 8px 20px;
+            margin-top: 50px;
+            margin-left: 30px;
+        }
+
+        .col-md-3 .list-unstyled .btn:hover {
+            background-color: #1e3044;
+        }
+
+        .col-md-9 {
+            padding: 20px;
+            margin-top: 30px;
+        }
+
+        @media (max-width: 768px) {
+            .canvas-container {
+                flex-direction: column;
+            }
+        }
+
+        .col-md-3 .list-unstyled .set {
+            background-color: #858383;
+            margin-top: 70px;
+        }
+    </style>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Pengaturan untuk grafik pertama
+            const ctx = document.getElementById('myChart2');
+            new Chart(ctx, {
+                type: 'bar',
+                data: {
+                    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+                    datasets: [{
+                        label: '# of Votes',
+                        data: [12, 19, 3, 5, 2, 3],
+                        borderWidth: 1
+                    }]
+                },
+                options: {
+                    scales: {
+                        y: {
+                            beginAtZero: true
+                        }
+                    }
+                }
+            });
+
+            // Pengaturan untuk grafik kedua
+            const ctx2 = document.getElementById('myChart');
+            new Chart(ctx2, {
+                type: 'line',
+                data: { // Perbaikan: Penamaan objek data
+                    labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+                    datasets: [{
+                        label: 'Looping tension',
+                        data: [65, 59, 80, 81, 26, 55, 40],
+                        fill: false,
+                        borderColor: 'rgb(75, 192, 192)',
+                    }]
+                },
+                options: {
+                    animations: {
+                        tension: {
+                            duration: 1000,
+                            easing: 'linear',
+                            from: 1,
+                            to: 0,
+                            loop: true
+                        }
+                    },
+                    scales: {
+                        y: {
+                            min: 0,
+                            max: 100
+                        }
+                    }
+                }
+            });
+        });
+    </script>
 </head>
+
 <body>
-    
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Bagian Kiri Halaman -->
+            <div class="col-md-3 bg-light">
+                <!-- <h4>Menu</h4> -->
+                <ul class="list-unstyled">
+                    <li><a href="#" class="btn btn-primary d-block mb-2">Beranda</a></li>
+                    <li><a href="#" class="btn btn-primary d-block mb-2">Manajemen Destinasi</a></li>
+                    <li><a href="#" class="btn btn-primary d-block mb-2">Manajemen Tiket</a></li>
+                    <li><a href="#" class="btn btn-primary d-block mb-2">Ulasan dan Rating</a></li>
+                    <li><a href="#" class="btn btn-primary d-block mb-2">Manajemen User</a></li>
+                    <br>
+                    <li><a href="#" class="btn btn-primary d-block mb-2 set">Pengaturan</a></li>
+                </ul>
+            </div>
+
+            <!-- Bagian Kanan Halaman -->
+            <!-- Bagian Kanan Halaman -->
+            <div class="col-md-9">
+                <div class="container">
+                    <div class="row">
+                        <div class="col">
+                            <div class="custom-table-wrapper">
+                                <!-- Div tambahan -->
+                                <table class="table table-bordered custom-table">
+                                    <thead class="table-success">
+                                        <tr>
+                                            <th scope="col">NO</th>
+                                            <th scope="col">Nama Destinasi</th>
+                                            <th scope="col">Lokasi Destinasi</th>
+                                            <th scope="col">Stok Tiket</th>
+                                            <th scope="col">Harga Satuan</th>
+                                            <!-- <th scope="col">Upload</th> -->
+                                            <!-- <th scope="col">Status</th>
+                                            <th scope="col">E-Ticket</th> -->
+                                            <th scope="col">Actions</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <th scope="row">1</th>
+                                            <td>Pulau Komodo</td>
+                                            <td>NTB</td>
+                                            <td>527</td>
+                                            <td>RP. 25.000</td>
+                                            <!-- <td><input type="file" /></td> -->
+                                            <!-- <td>Confirmed</td> -->
+                                            <!-- <td><a href="link_e_ticket">Download PDF</a></td> -->
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">2</th>
+                                            <td>Istano Basa Pagaruyung</td>
+                                            <td>Pariaman</td>
+                                            <td>391</td>
+                                            <td>RP. 75.000</td>
+                                            <!-- <td><input type="file" /></td> -->
+                                            <!-- <td>Pending</td> -->
+                                            <!-- <td><a href="link_e_ticket">Download PDF</a></td> -->
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <th scope="row">3</th>
+                                            <td>Museum Kereta Api Ambarawa</td>
+                                            <td>Lupa cuy</td>
+                                            <td>860</td>
+                                            <td>RP. 60.000</td>
+                                            <!-- <td><input type="file" /></td> -->
+                                            <!-- <td>Pending</td> -->
+                                            <!-- <td><a href="link_e_ticket">Download PDF</a></td> -->
+                                            <td>
+                                                <button type="button" class="btn btn-primary btn-sm">Edit</button>
+                                                <button type="button" class="btn btn-danger btn-sm">Delete</button>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- end -->
 </body>
+
 </html>
+
+<!-- Untuk modal -->
+<!-- judulattraction1 -->
+<!-- subtitleatrraction1 -->
+<!-- gambaratrraction1 -->
+<!-- judulattraction2 -->
+<!-- subtitleatrraction2 -->
+<!-- gambaratrraction3 -->
+<!-- subtitleatrraction3 -->
+<!-- gambaratrraction3 -->
+<!-- namakota -->
+<!-- quotes -->
+<!-- gambar_Artikel -->
+<!-- deskripsi_Artikel -->
+<!-- deskripsi_attraction1 -->
+<!-- deskripsi_attraction2 -->
+<!-- deskripsi_attraction3 -->
