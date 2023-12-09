@@ -22,8 +22,8 @@ load_dotenv(dotenv_path)
 MONGODB_URI = os.environ.get("MONGODB_URI")
 DB_NAME =  os.environ.get("DB_NAME")
 
-client = MongoClient(MONGODB_URI)
-db = client[DB_NAME]
+# client = MongoClient(MONGODB_URI)
+# db = client[DB_NAME]
 
 TOKEN_KEY = 'mytoken'
 
@@ -72,6 +72,22 @@ def beranda_admin():
 @app.route('/manajemen_destinasi')
 def manajemen_destinasi():
   return render_template('manajemen_destinasi.html')
+
+@app.route('/manajemen_tiket')
+def manajemen_tiket():
+  return render_template('manajemen_tiket.html')
+
+@app.route('/ulasan_rekomendasi')
+def ulasan_rekomendasi():
+  return render_template('ulasan_dan_rekom.html')
+
+@app.route('/manajemen_user')
+def manajemen_user():
+  return render_template('manajemen_user.html')
+
+@app.route('/profile_admin')
+def profile_admin():
+  return render_template('profile_Admin.html')
 
 if __name__ == '__main__':
     app.run('0.0.0.0', port = 5000, debug = True)
