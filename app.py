@@ -50,7 +50,21 @@ def destinations():
 
 @app.route('/detail_destinasi/<title>', methods=['GET'])
 def detail_destinasi(title):
-    return render_template('detail_destinasi.html')
+  user_info = {
+    'name': "Rifqi Khawarij"
+  }
+  destinasi_info = {
+    'namaDestinasi': "Yogyakarta",
+    'namaAttr1': "Malioboro",
+    'namaAttr2': "Candi Prambanan",
+    'namaAttr3': "Pantai Parangtritis",
+    'hargaTiketAttr1': "25.000",
+    'hargaTiketAttr2': "70.000",
+    'hargaTiketAttr3': "50.000",
+  }
+  logged_in = True
+  is_admin = False
+  return render_template('detail_destinasi.html', user_info=user_info, destinasi_info=destinasi_info, logged_in=logged_in, is_admin=is_admin)
   
 @app.route('/about', methods=['GET'])
 def about():
