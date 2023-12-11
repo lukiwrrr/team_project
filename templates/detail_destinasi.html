@@ -42,6 +42,7 @@
     <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 
     <link href="../static/css/mystyle.css" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
 
     <style>
       a {
@@ -63,6 +64,22 @@
         top: -90px;
       }
     </style>
+
+    <script>
+      function totalHarga() {
+        let hargaTiket = document.getElementById("hargaTiket").value;
+        let jumlahTiket = document.getElementById("jumlahTiket").value;
+
+        let hasilPerkalian = hargaTiket * jumlahTiket;
+
+        document.getElementById("totalHargaTiket").value = hasilPerkalian;
+      }
+
+      function hapus() {
+        $('.jumlahTiket').val("");
+        $('.totalHargaTiket').val("");
+      }
+    </script>
   </head>
 
   <body>
@@ -193,7 +210,7 @@
                 data-bs-target="#mymodal"
                 data-bs-attraction="{{ destinasi_info.namaAttr1 }}"
                 data-bs-pemesan="{{ user_info.name }}"
-                data-bs-hargaTiket="Rp. {{ destinasi_info.hargaTiketAttr1 }}"
+                data-bs-hargaTiket="{{ destinasi_info.hargaTiketAttr1 }}"
               >
                 Pesan Tiket
               </button>
@@ -223,7 +240,7 @@
                 data-bs-target="#mymodal"
                 data-bs-attraction="{{ destinasi_info.namaAttr2 }}"
                 data-bs-pemesan="{{ user_info.name }}"
-                data-bs-hargaTiket="Rp. {{ destinasi_info.hargaTiketAttr2 }}"
+                data-bs-hargaTiket="{{ destinasi_info.hargaTiketAttr2 }}"
               >
                 Pesan Tiket
               </button>
@@ -252,7 +269,7 @@
                 data-bs-target="#mymodal"
                 data-bs-attraction="{{ destinasi_info.namaAttr3 }}"
                 data-bs-pemesan="{{ user_info.name }}"
-                data-bs-hargaTiket="Rp. {{ destinasi_info.hargaTiketAttr3 }}"
+                data-bs-hargaTiket="{{ destinasi_info.hargaTiketAttr3 }}"
               >
                 Pesan Tiket
               </button>
@@ -282,7 +299,7 @@
       aria-labelledby="exampleModalLabel"
       aria-hidden="true"
     >
-      <div class="modal-dialog">
+      <div class="modal-dialog modal-dialog-centered">
         <div class="modal-content">
           <div class="modal-header">
             <h1 class="modal-title fs-5" id="exampleModalLabel">Pesan Tiket</h1>
@@ -303,7 +320,7 @@
               </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label"
-                  >Harga Satuan Tiket:</label
+                  >Harga Satuan Tiket: (Rp.)</label
                 >
                 <input
                   type="text"
@@ -319,20 +336,21 @@
                 <input
                   type="number"
                   class="jumlahTiket form-control"
-                  id="tiket"
+                  id="jumlahTiket"
+                  oninput="totalHarga()"
                 />
               </div>
-              <!-- <div class="mb-3">
+              <div class="mb-3">
                 <label for="message-text" class="col-form-label"
-                  >Total Harga Tiket:</label
+                  >Total Harga Tiket: (Rp.)</label
                 >
                 <input
                   type="number"
                   class="totalHargaTiket form-control"
                   id="totalHargaTiket"
-                  disabled
+                  readonly
                 />
-              </div> -->
+              </div>
               <div class="mb-3">
                 <label for="message-text" class="col-form-label"
                   >Tanggal:</label
@@ -344,6 +362,7 @@
           <div class="modal-footer">
             <button
               type="button"
+              onclick="hapus()"
               class="btn btn-danger"
               data-bs-dismiss="modal"
             >
@@ -374,7 +393,7 @@
         <!-- gambar artikel -->
         <img
           class="article-img"
-          style="border-radius: 15px; max-height: 18rem;"
+          style="border-radius: 15px; max-height: 18rem"
           src="../static/img/detail_destinasi/gambarArtikel.jpg"
           alt=""
         />
@@ -740,7 +759,6 @@
       AOS.init();
     </script>
     <!-- jQuery -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-cookie/1.4.1/jquery.cookie.js"></script>
     <!-- Core theme JS-->
     <script src="../static/js/scripts.js"></script>

@@ -58,9 +58,9 @@ def detail_destinasi(title):
     'namaAttr1': "Malioboro",
     'namaAttr2': "Candi Prambanan",
     'namaAttr3': "Pantai Parangtritis",
-    'hargaTiketAttr1': "25.000",
-    'hargaTiketAttr2': "70.000",
-    'hargaTiketAttr3': "50.000",
+    'hargaTiketAttr1': 25000,
+    'hargaTiketAttr2': 70000,
+    'hargaTiketAttr3': 50000,
   }
   logged_in = True
   is_admin = False
