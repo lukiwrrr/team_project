@@ -92,7 +92,7 @@
               <a class="nav-link" href="/">Home</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="/destinations">Destinations</a>
+              <a class="nav-link" href="/destinasi">Destinations</a>
             </li>
             <li class="nav-item">
               <a class="nav-link" href="/about">About Us</a>
@@ -374,7 +374,7 @@
         <!-- gambar artikel -->
         <img
           class="article-img"
-          style="border-radius: 15px"
+          style="border-radius: 15px; max-height: 18rem;"
           src="../static/img/detail_destinasi/gambarArtikel.jpg"
           alt=""
         />
@@ -406,20 +406,104 @@
           src="../static/img/detail_destinasi/gambarAttraction1.jpeg"
           alt=""
         />
-        <!-- deskripsi attraction 1 -->
-        <p>
-          Jalan Malioboro adalah jantung pusat kota Yogyakarta dan merupakan
-          destinasi wisata yang sangat terkenal di Indonesia. Jalan ini tidak
-          hanya menjadi pusat perbelanjaan, tetapi juga merangkul kekayaan
-          budaya dan sejarah kota. Di sepanjang Jalan Malioboro, Anda akan
-          menemukan beragam toko tradisional, pedagang kaki lima, dan penjual
-          khas Jogja yang menawarkan berbagai barang kerajinan tangan, batik,
-          pakaian, dan suvenir. Selain belanja, Jalan Malioboro juga dikenal
-          sebagai tempat untuk menikmati kuliner khas Yogyakarta. Warung dan
-          pedagang makanan khas Jogja tersebar di sepanjang jalan, menawarkan
-          pengalaman kuliner yang autentik, seperti gudeg, bakmi, dan makanan
-          khas lainnya.
-        </p>
+        <div class="row flex-column flex-md-row justify-content-between">
+          <!-- Kolom Kiri -->
+          <!-- deskripsi attraction 1 -->
+          <div class="col-md-8 column">
+            <p class="parag">
+              Jalan Malioboro adalah jantung pusat kota Yogyakarta dan merupakan
+              destinasi wisata yang sangat terkenal di Indonesia. Jalan ini
+              tidak hanya menjadi pusat perbelanjaan, tetapi juga merangkul
+              kekayaan budaya dan sejarah kota. Di sepanjang Jalan Malioboro,
+              Anda akan menemukan beragam toko tradisional, pedagang kaki lima,
+              dan penjual khas Jogja yang menawarkan berbagai barang kerajinan
+              tangan, batik, pakaian, dan suvenir. Selain belanja, Jalan
+              Malioboro juga dikenal sebagai tempat untuk menikmati kuliner khas
+              Yogyakarta. Warung dan pedagang makanan khas Jogja tersebar di
+              sepanjang jalan, menawarkan pengalaman kuliner yang autentik,
+              seperti gudeg, bakmi, dan makanan khas lainnya.
+            </p>
+          </div>
+
+          <!-- Kolom Kanan -->
+          <div class="col-md-4 column mt-2">
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Trio | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Cindi Lucky | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Rifqi Khawariz | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <a style="color: #ffc800" href="#">Pesan Tiket >></a>
       </div>
       <br />
       <div class="container myarticle">
@@ -432,19 +516,104 @@
           src="../static/img/detail_destinasi/gambarAttraction2.jpg"
           alt=""
         />
-        <!-- deskripsi attraction 2 -->
-        <p>
-          Candi Prambanan adalah salah satu situs warisan budaya dunia yang
-          terletak di Yogyakarta, Indonesia. dikelilingi oleh taman yang hijau
-          dan pohon-pohon yang memberikan suasana yang sejuk dan damai.
-          Keindahan alam sekitar membuat pengalaman berkunjung semakin
-          menyenangkan. Ini adalah kompleks candi Hindu terbesar di Indonesia
-          dan dianggap sebagai salah satu destinasi wisata yang paling menarik
-          untuk dikunjungi. Candi Prambanan tidak hanya menawarkan keindahan
-          arsitektur kuno, tetapi juga memperkaya pengalaman wisatawan dengan
-          budaya, sejarah, dan kespiritualan. Keunikan dan keindahan situs ini
-          menjadikannya destinasi wisata yang sangat menarik di Indonesia.
-        </p>
+        <div class="row flex-column flex-md-row justify-content-between">
+          <!-- Kolom Kiri -->
+          <!-- deskripsi attraction 2 -->
+          <div class="col-md-8 column">
+            <p class="parag">
+              Candi Prambanan adalah salah satu situs warisan budaya dunia yang
+              terletak di Yogyakarta, Indonesia. dikelilingi oleh taman yang
+              hijau dan pohon-pohon yang memberikan suasana yang sejuk dan
+              damai. Keindahan alam sekitar membuat pengalaman berkunjung
+              semakin menyenangkan. Ini adalah kompleks candi Hindu terbesar di
+              Indonesia dan dianggap sebagai salah satu destinasi wisata yang
+              paling menarik untuk dikunjungi. Candi Prambanan tidak hanya
+              menawarkan keindahan arsitektur kuno, tetapi juga memperkaya
+              pengalaman wisatawan dengan budaya, sejarah, dan kespiritualan.
+              Keunikan dan keindahan situs ini menjadikannya destinasi wisata
+              yang sangat menarik di Indonesia.
+            </p>
+          </div>
+
+          <!-- Kolom Kanan -->
+          <div class="col-md-4 column mt-2">
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Trio | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Cindi Lucky | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Rifqi Khawariz | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <a style="color: #ffc800" href="#">Pesan Tiket >></a>
       </div>
       <br />
       <div class="container myarticle">
@@ -457,28 +626,112 @@
           src="../static/img/detail_destinasi/gambarAttraction3.jpg"
           alt=""
         />
-        <!-- deskripsi attraction 3 -->
-        <p>
-          Pantai Parangtritis adalah salah satu destinasi wisata yang terkenal
-          di Yogyakarta, Indonesia. Berlokasi sekitar 27 kilometer selatan
-          Yogyakarta, mempesona pengunjung dengan keindahan alamnya yang
-          memukau. Pantai ini memiliki garis pantai yang panjang dengan pasir
-          putih yang lembut dan ombak Samudera Hindia yang memukau. Pemandangan
-          matahari terbenam di atas laut di sini juga terkenal sebagai salah
-          satu yang terbaik di Yogyakarta. Pantai Parangtritis menawarkan
-          kombinasi indah antara panorama laut yang menakjubkan, pasir pantai
-          yang luas, dan nuansa mistis yang kental. Pantai Parangtritis
-          menyajikan pengalaman wisata yang lengkap dengan kombinasi keindahan
-          alam, nilai budaya, dan kegiatan rekreasi. Destinasi ini menarik
-          wisatawan lokal maupun internasional yang ingin mengeksplorasi
-          kekayaan alam dan budaya Indonesia.
-        </p>
+        <div class="row flex-column flex-md-row justify-content-between">
+          <!-- Kolom Kiri -->
+          <div class="col-md-8 column">
+            <!-- deskripsi attraction 3 -->
+            <p class="parag">
+              Pantai Parangtritis adalah salah satu destinasi wisata yang
+              terkenal di Yogyakarta, Indonesia. Berlokasi sekitar 27 kilometer
+              selatan Yogyakarta, mempesona pengunjung dengan keindahan alamnya
+              yang memukau. Pantai ini memiliki garis pantai yang panjang dengan
+              pasir putih yang lembut dan ombak Samudera Hindia yang memukau.
+              Pemandangan matahari terbenam di atas laut di sini juga terkenal
+              sebagai salah satu yang terbaik di Yogyakarta. Pantai Parangtritis
+              menawarkan kombinasi indah antara panorama laut yang menakjubkan,
+              pasir pantai yang luas, dan nuansa mistis yang kental. Pantai
+              Parangtritis menyajikan pengalaman wisata yang lengkap dengan
+              kombinasi keindahan alam, nilai budaya, dan kegiatan rekreasi.
+              Destinasi ini menarik wisatawan lokal maupun internasional yang
+              ingin mengeksplorasi kekayaan alam dan budaya Indonesia.
+            </p>
+          </div>
+
+          <!-- Kolom Kanan -->
+          <div class="col-md-4 column mt-2">
+            <div
+              id="carouselExampleAutoplaying"
+              class="carousel slide"
+              data-bs-ride="carousel"
+            >
+              <div class="carousel-inner">
+                <div class="carousel-item active">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Trio | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Cindi Lucky | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="carousel-item">
+                  <div
+                    class="card ms-2"
+                    style="height: 10rem; max-width: 21rem; overflow: hidden"
+                  >
+                    <div class="card-body bg-body-secondary">
+                      <p class="card-text text-body-secondary pt-2">
+                        "Some quick example text to build on the card title and
+                        make up the bulk of the card's content."
+                      </p>
+                      <p>Rifqi Khawariz | ⭐️⭐️⭐️⭐️</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <button
+                class="carousel-control-prev"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="prev"
+              >
+                <span
+                  class="carousel-control-prev-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Previous</span>
+              </button>
+              <button
+                class="carousel-control-next"
+                type="button"
+                data-bs-target="#carouselExampleAutoplaying"
+                data-bs-slide="next"
+              >
+                <span
+                  class="carousel-control-next-icon"
+                  aria-hidden="true"
+                ></span>
+                <span class="visually-hidden">Next</span>
+              </button>
+            </div>
+          </div>
+        </div>
+        <a style="color: #ffc800" href="#">Pesan Tiket >></a>
       </div>
     </section>
     <hr />
-    
+
     {% include 'footerUser.html' %}
-    
+
     <!-- bootstrap js -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
     <!-- AOS js -->

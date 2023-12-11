@@ -221,8 +221,8 @@ header.masthead .masthead-heading h1 {
   }
   .masthead-heading span::before {
     content: "";
-    height: 50px;
-    width: 2px;
+    height: 55px;
+    width: 3px;
     position: absolute;
     top: 50%;
     right: -8px;
@@ -559,9 +559,13 @@ section p.ringkasan {
   }
 }
 
-.myarticle p {
+.myarticle .parag {
   text-align: justify;
   text-indent: 50px;
+}
+
+.myarticle p {
+  text-align: justify;
 }
 
 /* about us */
